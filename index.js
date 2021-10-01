@@ -45,19 +45,6 @@ app.get("/", (req, res) => {
         categoria: 'Butterfly',
         habilidade: 'Compound Eyes'
         }
-
-        // {nome: 'teste nome',
-        // tipo: 'teste tipo',
-        // descricao: 'teste descricao'
-        // },
-        // {nome: 'teste nome2',
-        // tipo: 'teste tipo2',
-        // descricao: 'teste descricao2'
-        // },
-        // {nome: 'teste nome3',
-        // tipo: 'teste tipo3',
-        // descricao: 'teste descricao3'
-        // },
     ];
     res.render("index", {titulo: "Pokédex", lista:conteudos}); // Nome do arquivo, o EJS já busca dentro da pasta views.
 });

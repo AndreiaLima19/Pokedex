@@ -3,3 +3,23 @@ p {
     font-weight: bold;
     font-style: italic;
 }
+
+
+/* 
+Chanely
+body {
+    background-image: url("../media/image/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    vertical-align: bottom;
+    background-position: 0%;
+    background-size: 100%; */
+
+    /* 
+    Prof Gabriel
+    body {
+        background-image: url("img_tree.gif");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      } */
