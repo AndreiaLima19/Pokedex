@@ -10,7 +10,7 @@
 <body>
     <h1>Cadastrar Pokemon</h1>
     
-    <form action="/recebeform" method="POST">
+    <form action="/new" method="POST">
         <!-- Número;
         Nome;
         Tipo;
@@ -37,13 +37,12 @@
 
         <div>
             <label for="imagem">Imagem: </label>
-            <input type="text" name="imagem" id="input_imagem" placeholder="Digite a URL" required>
+            <input type="url" name="imagem" id="input_imagem" placeholder="Digite a URL" required>
         </div>
         <div>
             <label for="descricao">Descrição: </label>
             <input type="text" name="descricao" id="input_descricao" placeholder="Digite a descrição" required>
         </div>
-
 
         <button type="submit">Adicionar Pokemon</button>
     </form>
