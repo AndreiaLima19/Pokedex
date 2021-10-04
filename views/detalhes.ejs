@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <link rel = "stylesheet" href="/css/style.css"> 
+    <title>Detalhes</title>
 </head>
 <body>
-    <h1>Detalhes EJS!</h1>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+          </ul>
+    </nav>
+
+    <header>
+        <article>
+            <h1><%= titulo%></h1>
+        </article>
+    </header>
+   
+    <p><img src ="<%= pokemon.imagem %>" alt="Imagem Pokémon"/></p>
+    
+    <span>Número:</span>
+    <p><%=pokemon.numero%></p>
+    
+    <br><span>Nome:</span>
+    <p><%=pokemon.nome%></p>
+
+    <br><span>Tipo:</span>
+    <p><%=pokemon.tipo%></p>
+
+    <br><span>Descrição:</span>
+    <p><%=pokemon.descricao%></p>
+
+    <br><span>Altura:</span>
+    <p><%=pokemon.altura%></p>
+
+    <br><span>Peso:</span>
+    <p><%=pokemon.peso%></p>
+
+    <br><span>Categoria:</span>
+    <p><%=pokemon.categoria%></p>
+
+    <br><span>Habilidade:</span>
+    <p><%=pokemon.habilidade%></p>
+   
 </body>
 </html>

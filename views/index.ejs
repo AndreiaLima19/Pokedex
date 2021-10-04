@@ -9,23 +9,54 @@
     <title>Projeto Pokédex</title>
 </head>
 <body>
-    <h1><%= titulo%></h1>
+    
+    <nav>
+            <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="cadastro">Cadastrar</a>
+            </li>
+        </ul>
+    </nav>
 
-    <!-- Aqui vou incluir os pokemons -->
+    <% if(message != ""){ %>
+        <section id="message">
+            <p><%= message %></p> <span id="close">&times;</span>
+        </section>
+    <% } %>
+
+    <header>
+        <article>
+            <h1><center><%= titulo%></center></h1>
+            <p>É uma enciclopédia virtual portátil de alta tecnologia que os treinadores Pokémon 
+                transportam para registrar todas as espécies diferentes de Pokémon.</p>
+             
+        </article>
+    </header>
+
+    <section id="sessao1">
+    <section class = "card">
+    <article id="content">
     <ul>
-        <% lista.forEach(item => { %>
-            <!-- <li><%= item.nome %></li>
-            <li><img src ="<%= item.imagem %>" /></li>
-            <li><%= item.tipo %></li> -->
-
-            <p><%= item.nome %></p>
-            <p><img src ="<%= item.imagem %>" /></p>
+        <% lista.forEach((item, find) => { %>
+            <a href = "/detalhes/<%= find %>">
+            <p><img src ="<%= item.imagem %>" alt="Imagem Pokémon"/></p>
+            <p><%= item.nome %></p>         
             <p><%= item.tipo %></p>
 
         <% }) %> 
     </ul>
+    </article>
+    </section>
+    </section>
 
-    <a href="cadastro">Clique aqui para cadastrar !</a>
+    <footer>
+        <p>Copyright 2021 - Blue Edtech</p>
+    </footer> 
+
+    <script src="/js/script.js"></script>
     
 </body>
 </html>

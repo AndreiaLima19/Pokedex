@@ -44,11 +44,16 @@ const pokedex = [
 let message = "";
 
 app.get("/", (req, res) => {
-    res.render("index", {titulo: "Pokédex", lista:pokedex}); // Nome do arquivo, o EJS já busca dentro da pasta views.
-});
 
+    setTimeout(() => {
+        message = ""
+    }, 5000);
+
+    res.render("index", {titulo: "Pokédex", lista:pokedex, message}); // Nome do arquivo, o EJS já busca dentro da pasta views.
+});
+ 
 app.get("/cadastro", (req, res) => {
-    res.render("cadastro"); // Nome do arquivo, o EJS já busca dentro da pasta views.
+    res.render("cadastro",{titulo: "Cadastrar Pokémon"}); // Nome do arquivo, o EJS já busca dentro da pasta views.
 });
 
 app.post("/new", function (req, res){
@@ -59,15 +64,17 @@ app.post("/new", function (req, res){
     message = "Pokemon cadastrado";
 
     setTimeout(() => {
-        //site.message = ""
-        message = ""
+        message = "";
     }, 1000);
 
     res.redirect("/");
 });
 
-app.get("/detalhes", (req, res) => {
-    res.render("detalhes"); // Nome do arquivo, o EJS já busca dentro da pasta views.
+app.get("/detalhes/:id", (req, res) => {
+    const id = req.params.id;
+    const pokemon = pokedex[id];
+    message = "";
+    res.render("detalhes", {titulo: "Detalhes Pokémon", pokemon}); 
 });
 
 // Adicionando a const port e uma arow function de callback para mostrar no console que o servidor está rodando.

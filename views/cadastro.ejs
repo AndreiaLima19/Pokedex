@@ -8,26 +8,31 @@
     <title>Cadastro Pokédex</title>
 </head>
 <body>
-    <h1>Cadastrar Pokemon</h1>
-    
-    <form action="/new" method="POST">
-        <!-- Número;
-        Nome;
-        Tipo;
-        Imagem;
-        Descrição;
-        Altura;
-        Peso;
-        Categoria;
-        Habilidade; -->
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+        </ul>
+    </nav>
 
+    <header>
+        <article>
+            <h1><%= titulo%></h1>
+        </article>
+    </header>
+       
+    <form action="/new" method="POST">
+        
         <div>
             <label for="numero">Número: </label>
             <input type="number" name="numero" id="input_numero" placeholder="Digite o número" required>
         </div>
         <div>
+            <p>
             <label for="nome">Nome: </label>
             <input type="text" name="nome" id="input_nome" placeholder="Digite o nome" required>
+            </p>
         </div>
 
         <div>
@@ -43,8 +48,25 @@
             <label for="descricao">Descrição: </label>
             <input type="text" name="descricao" id="input_descricao" placeholder="Digite a descrição" required>
         </div>
+        <div>
+            <label for="altura">Altura: </label>
+            <input type="text" name="altura" id="input_altura" placeholder="Digite a altura" required>
+        </div>
+        <div>
+            <label for="peso">Peso: </label>
+            <input type="text" name="peso" id="input_peso" placeholder="Digite o peso" required>
+        </div>
+        <div>
+            <label for="categoria">Categoria: </label>
+            <input type="text" name="categoria" id="input_categoria" placeholder="Digite a categoria" required>
+        </div>
+        <div>
+            <label for="habilidade">Habilidade: </label>
+            <input type="text" name="habilidade" id="input_habilidade" placeholder="Digite a habilidade" required>
+        </div>
 
-        <button type="submit">Adicionar Pokemon</button>
+
+        <button type="submit">Adicionar Pokémon</button>
     </form>
 </body>
 </html>
