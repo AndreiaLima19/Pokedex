@@ -49,11 +49,11 @@ app.get("/", (req, res) => {
         message = ""
     }, 5000);
 
-    res.render("index", {titulo: "Pokédex", lista:pokedex, message}); // Nome do arquivo, o EJS já busca dentro da pasta views.
+    res.render("index", {titulo: "Pokédex", lista:pokedex, message}); 
 });
  
 app.get("/cadastro", (req, res) => {
-    res.render("cadastro",{titulo: "Cadastrar Pokémon"}); // Nome do arquivo, o EJS já busca dentro da pasta views.
+    res.render("cadastro",{titulo: "Cadastrar Pokémon"}); 
 });
 
 app.post("/new", function (req, res){
@@ -61,7 +61,7 @@ app.post("/new", function (req, res){
 
     pokedex.push(pokemon);
 
-    message = "Pokemon cadastrado";
+    message = "Pokémon cadastrado";
 
     setTimeout(() => {
         message = "";

@@ -37,22 +37,21 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: red; /*rgb(68, 105, 255); */
+  color: red; 
   font-weight: bold;
   font-size: 1.2rem;
   transition: 0.5s;
 }
 
 nav ul li a:hover {
-  color: black; /*rgb(255, 68, 230);*/
+  color: black; 
 }
 
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: red; /*rgb(68, 105, 255); */
-  /* padding: 6rem 3rem 3rem 3rem; */
+  background-color: red; 
   padding: 3rem 2rem 2rem 2rem;
 
 }
@@ -64,19 +63,20 @@ header article h1 {
 }
 
 p {
-    color: black;
-    font-weight: bold;
-    font-style: italic;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
 }
+
 section#sessao1 {
-  background-color: white;/*rgb(255, 68, 230); */
+  background-color: white;
   padding: 3rem;
   display: flex;
   justify-content: center;
 }
 
 section#sessao1 section.card {
-  background-color:  grey;  /*#fff; rgb(255, 68, 77) */
+  background-color:  grey;  
   padding: 3rem;
   border-radius: 1.5rem;
   display: flex;
@@ -135,7 +135,55 @@ section#message {
     color: rgb(255, 0, 0);
     transform: scale(1.5);
   }
+
+  section#cadastrar {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+   
+  section#cadastrar form {
+    width: 50%;
+  }
   
+  section#cadastrar form div input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1 rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    outline:auto;
+    border: none;
+  }
+  
+  section#cadastrar form div label {
+    font-size: 1 rem;
+    color: red;
+  }
+  
+  section#cadastrar form button {
+    border: 1px solid red;
+    background-color: #fff;
+    color: red;
+    padding: 1rem;
+    font-size: 0.8vw;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    width: 40%;
+  }
+  
+  section#cadastrar form button:hover {
+    background-color: red;
+    color: #fff;
+    transform: scale(1.1);
+  }
+
   footer {
     padding: 3rem;
     text-align: center;
@@ -144,6 +192,7 @@ section#message {
   footer p {
     font-size: 1.2rem;
     font-weight: bold;
+    color: red;
   }
   
   footer p a {
